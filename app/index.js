@@ -1,19 +1,29 @@
 import 'jquery';
 
-import { helpMe } from './helper';
+// var createArist  = function(name) {
+//   return name;
+// }
 
-const siteSetup = () => {
-  console.log("Set up ... in arrow function now")
-}
+// const createArist =  (name) => {
+//   return name;
+// }
 
-const testjQuery = () => {
-  const thisBody = $('body');
-  thisBody.css({ 'color': '#fff' })
-}
+// const createArist = name => {
+//   return name;
+// }
+
+// const createArist = name => name;
+
+const createArist = (first, last) => last + ', ' + first;
+
+const triple = x => x * 3; 
 
 $(function () {
-  helpMe();
-  siteSetup();
-  testjQuery();
+  // const artist = createArist("Chris Stapleton 5");
+  const artist = createArist("Chris", "Stapleton");
+  console.log(artist);
+
+  const tripled = triple(9);
+  console.log(tripled);
 });
 
