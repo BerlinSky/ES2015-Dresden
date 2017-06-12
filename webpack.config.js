@@ -17,10 +17,8 @@ const cleanWebPackPlugin = new CleanWebpackPlugin(['dist'])
 
 const babelOptions = {
   presets:  [
-    [ 'es2015', { modules: false } ],
-    [ 'es2017' ]
-  ],
-  plugins: ['transform-runtime', 'transform-decorators-legacy', 'transform-class-properties', 'transform-object-rest-spread']
+    [ 'es2015', { modules: false } ]
+  ]
 }
 
 const entryConfig = {
@@ -169,12 +167,6 @@ module.exports = (env = {}) => {
         favicon: 'app/favicon.png',
         template: 'app/index.pug',
         filename: 'index.html',
-        chunnk: ['index']
-      }),
-      new HtmlWebpackPlugin({
-        favicon: 'app/favicon.png',
-        template: 'app/service.pug',
-        filename: 'service.html',
         chunnk: ['index']
       }),
 
