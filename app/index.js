@@ -1,29 +1,32 @@
 import 'jquery';
 
-// var createArist  = function(name) {
-//   return name;
-// }
+const artist = {
+  name: "Chris Stapleton",
 
-// const createArist =  (name) => {
-//   return name;
-// }
+  processRequest: function(request, handler) {
+    handler(request);
+  },
 
-// const createArist = name => {
-//   return name;
-// }
+  // replyToRequest: function() {
+  //   const that = this;
 
-// const createArist = name => name;
+  //   this.processRequest("Would you please play my favorite song, ", function(request) {
+  //     that.name;  
 
-const createArist = (first, last) => last + ', ' + first;
+  //     console.log(request + that.name + "?");
+  //   })
+  // }
 
-const triple = x => x * 3; 
+  replyToRequest: function() {
+    this.processRequest("Would you please play my favorite song, ", (request) => {
+      // that.name;  
+
+      console.log(request + this.name + "?");
+    })
+  }
+}
 
 $(function () {
-  // const artist = createArist("Chris Stapleton 5");
-  const artist = createArist("Chris", "Stapleton");
-  console.log(artist);
-
-  const tripled = triple(9);
-  console.log(tripled);
+  artist.replyToRequest();
 });
 
