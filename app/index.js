@@ -1,7 +1,6 @@
 import 'jquery';
 
 import { helpMe } from './helper';
-import { checkAsyncResult } from './use-async';
 
 const siteSetup = () => {
   console.log("Set up ... in arrow function now")
@@ -15,7 +14,6 @@ const testjQuery = () => {
 $(function () {
   helpMe();
   siteSetup();
-  checkAsyncResult();
   testjQuery();
 });
 
